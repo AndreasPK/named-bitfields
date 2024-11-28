@@ -1,0 +1,191 @@
+Build profile: -w ghc-9.6.6 -O1
+In order, the following will be built (use -v for more details):
+ - bitfields-0.1.0.0 (exe:test-packing) (file app\Main.hs changed)
+Preprocessing executable 'test-packing' for bitfields-0.1.0.0...
+Building executable 'test-packing' for bitfields-0.1.0.0...
+compile: input file app\Main.hs
+*** Checking old interface for Main (use -ddump-hi-diffs for more details):
+[1 of 1] Compiling Main             ( app\Main.hs, C:\shared\haskell\bitfields\dist-newstyle\build\x86_64-windows\ghc-9.6.6\bitfields-0.1.0.0\x\test-packing\build\test-packing\test-packing-tmp\Main.o ) [Source file changed]
+*** Parser [Main]:
+!!! Parser [Main]: finished in 0.00 milliseconds, allocated 3.288 megabytes
+*** Renamer/typechecker [Main]:
+!!! Renamer/typechecker [Main]: finished in 78.12 milliseconds, allocated 48.162 megabytes
+*** Desugar [Main]:
+Result size of Desugar (before optimization)
+  = {terms: 560, types: 10,138, coercions: 49,138, joins: 0/6}
+Result size of Desugar (after optimization)
+  = {terms: 328, types: 6,229, coercions: 49,682, joins: 0/0}
+!!! Desugar [Main]: finished in 343.75 milliseconds, allocated 389.392 megabytes
+
+app\Main.hs:20:1: warning: [-Wunused-imports]
+    The import of `Data.Kind' is redundant
+      except perhaps to import instances from `Data.Kind'
+    To import instances alone, use: import Data.Kind()
+   |
+20 | import Data.Kind
+   | ^^^^^^^^^^^^^^^^
+
+app\Main.hs:21:1: warning: [-Wunused-imports]
+    The import of `GHC.TypeLits' is redundant
+      except perhaps to import instances from `GHC.TypeLits'
+    To import instances alone, use: import GHC.TypeLits()
+   |
+21 | import GHC.TypeLits
+   | ^^^^^^^^^^^^^^^^^^^
+
+app\Main.hs:24:1: warning: [GHC-38417] [-Wmissing-signatures]
+    Top-level binding with no type signature: fasd :: Integer
+   |
+24 | fasd = 2
+   | ^^^^
+
+app\Main.hs:24:8: warning: [GHC-18042] [-Wtype-defaults]
+    * Defaulting the type variable `a0' to type `Integer' in the following constraint
+        Num a0 arising from the literal `2'
+    * In the expression: 2
+      In an equation for `fasd': fasd = 2
+   |
+24 | fasd = 2
+   |        ^
+
+app\Main.hs:93:1: warning: [GHC-38417] [-Wmissing-signatures]
+    Top-level binding with no type signature: foo :: MyPackedField
+   |
+93 | foo = newPackedField :: MyPackedField
+   | ^^^
+
+app\Main.hs:94:1: warning: [GHC-38417] [-Wmissing-signatures]
+    Top-level binding with no type signature: bar :: MyPackedField2
+   |
+94 | bar = newPackedField :: MyPackedField2
+   | ^^^
+*** Simplifier [Main]:
+Result size of Simplifier iteration=1
+  = {terms: 412, types: 486, coercions: 1,409, joins: 0/4}
+Result size of Simplifier
+  = {terms: 304, types: 318, coercions: 1,317, joins: 0/1}
+!!! Simplifier [Main]: finished in 31.25 milliseconds, allocated 26.653 megabytes
+*** Specialise [Main]:
+Result size of Specialise
+  = {terms: 304, types: 318, coercions: 1,317, joins: 0/1}
+!!! Specialise [Main]: finished in 0.00 milliseconds, allocated 0.335 megabytes
+*** Float out(FOS {Lam = Just 0,
+                   Consts = True,
+                   OverSatApps = False}) [Main]:
+Result size of Float out(FOS {Lam = Just 0, Consts = True, OverSatApps = False})
+  = {terms: 370, types: 378, coercions: 1,317, joins: 0/0}
+!!! Float out(FOS {Lam = Just 0,
+                   Consts = True,
+                   OverSatApps = False}) [Main]: finished in 0.00 milliseconds, allocated 0.715 megabytes
+*** Simplifier [Main]:
+Result size of Simplifier iteration=1
+  = {terms: 337, types: 329, coercions: 1,317, joins: 3/7}
+Result size of Simplifier iteration=2
+  = {terms: 296, types: 312, coercions: 1,317, joins: 4/4}
+Result size of Simplifier iteration=3
+  = {terms: 288, types: 304, coercions: 1,317, joins: 0/0}
+Result size of Simplifier
+  = {terms: 288, types: 304, coercions: 1,317, joins: 0/0}
+!!! Simplifier [Main]: finished in 0.00 milliseconds, allocated 4.532 megabytes
+*** Simplifier [Main]:
+Result size of Simplifier iteration=1
+  = {terms: 242, types: 285, coercions: 1,317, joins: 0/0}
+Result size of Simplifier
+  = {terms: 242, types: 285, coercions: 1,317, joins: 0/0}
+!!! Simplifier [Main]: finished in 0.00 milliseconds, allocated 1.857 megabytes
+*** Simplifier [Main]:
+Result size of Simplifier
+  = {terms: 242, types: 285, coercions: 1,317, joins: 0/0}
+!!! Simplifier [Main]: finished in 0.00 milliseconds, allocated 0.671 megabytes
+*** Float inwards [Main]:
+Result size of Float inwards
+  = {terms: 242, types: 285, coercions: 1,317, joins: 0/0}
+!!! Float inwards [Main]: finished in 0.00 milliseconds, allocated 0.227 megabytes
+*** Called arity analysis [Main]:
+Result size of Called arity analysis
+  = {terms: 242, types: 285, coercions: 1,317, joins: 0/0}
+!!! Called arity analysis [Main]: finished in 0.00 milliseconds, allocated 0.219 megabytes
+*** Simplifier [Main]:
+Result size of Simplifier
+  = {terms: 242, types: 285, coercions: 1,317, joins: 0/0}
+!!! Simplifier [Main]: finished in 15.63 milliseconds, allocated 0.671 megabytes
+*** Demand analysis (including Boxity) [Main]:
+Result size of Demand analysis (including Boxity)
+  = {terms: 242, types: 285, coercions: 1,317, joins: 0/0}
+!!! Demand analysis (including Boxity) [Main]: finished in 0.00 milliseconds, allocated 0.252 megabytes
+*** Constructed Product Result analysis [Main]:
+Result size of Constructed Product Result analysis
+  = {terms: 242, types: 285, coercions: 1,317, joins: 0/0}
+!!! Constructed Product Result analysis [Main]: finished in 0.00 milliseconds, allocated 0.130 megabytes
+*** Worker Wrapper binds [Main]:
+Result size of Worker Wrapper binds
+  = {terms: 262, types: 316, coercions: 1,317, joins: 0/1}
+!!! Worker Wrapper binds [Main]: finished in 0.00 milliseconds, allocated 0.123 megabytes
+*** Simplifier [Main]:
+Result size of Simplifier iteration=1
+  = {terms: 249, types: 293, coercions: 1,317, joins: 0/0}
+Result size of Simplifier
+  = {terms: 249, types: 293, coercions: 1,317, joins: 0/0}
+!!! Simplifier [Main]: finished in 0.00 milliseconds, allocated 1.624 megabytes
+*** Exitification transformation [Main]:
+Result size of Exitification transformation
+  = {terms: 249, types: 293, coercions: 1,317, joins: 0/0}
+!!! Exitification transformation [Main]: finished in 0.00 milliseconds, allocated 0.093 megabytes
+*** Float out(FOS {Lam = Just 0,
+                   Consts = True,
+                   OverSatApps = True}) [Main]:
+Result size of Float out(FOS {Lam = Just 0, Consts = True, OverSatApps = True})
+  = {terms: 265, types: 303, coercions: 1,317, joins: 0/0}
+!!! Float out(FOS {Lam = Just 0,
+                   Consts = True,
+                   OverSatApps = True}) [Main]: finished in 0.00 milliseconds, allocated 0.552 megabytes
+*** Common sub-expression [Main]:
+Result size of Common sub-expression
+  = {terms: 264, types: 303, coercions: 1,268, joins: 0/0}
+!!! Common sub-expression [Main]: finished in 0.00 milliseconds, allocated 0.348 megabytes
+*** Float inwards [Main]:
+Result size of Float inwards
+  = {terms: 264, types: 303, coercions: 1,268, joins: 0/0}
+!!! Float inwards [Main]: finished in 0.00 milliseconds, allocated 0.230 megabytes
+*** Simplifier [Main]:
+Result size of Simplifier iteration=1
+  = {terms: 262, types: 302, coercions: 1,317, joins: 0/0}
+Result size of Simplifier
+  = {terms: 262, types: 302, coercions: 1,317, joins: 0/0}
+!!! Simplifier [Main]: finished in 0.00 milliseconds, allocated 1.664 megabytes
+*** Demand analysis [Main]:
+Result size of Demand analysis
+  = {terms: 262, types: 302, coercions: 1,317, joins: 0/0}
+!!! Demand analysis [Main]: finished in 0.00 milliseconds, allocated 0.288 megabytes
+*** CoreTidy [Main]:
+!!! CoreTidy [Main]: finished in 0.00 milliseconds, allocated 0.435 megabytes
+Result size of Tidy Core
+  = {terms: 262, types: 302, coercions: 1,317, joins: 0/0}
+Created temporary directory: C:\Users\andi\AppData\Local\Temp\ghc116276_0
+*** CorePrep [Main]:
+Result size of CorePrep
+  = {terms: 361, types: 298, coercions: 1,501, joins: 0/3}
+!!! CorePrep [Main]: finished in 0.00 milliseconds, allocated 0.412 megabytes
+*** CoreToStg [Main]:
+*** Stg2Stg:
+!!! CoreToStg [Main]: finished in 0.00 milliseconds, allocated 0.501 megabytes
+*** CodeGen [Main]:
+!!! CodeGen [Main]: finished in 15.63 milliseconds, allocated 31.416 megabytes
+*** WriteIface [C:\\shared\\haskell\\bitfields\\dist-newstyle\\build\\x86_64-windows\\ghc-9.6.6\\bitfields-0.1.0.0\\x\\test-packing\\build\\test-packing\\test-packing-tmp\Main.hi]:
+!!! WriteIface [C:\\shared\\haskell\\bitfields\\dist-newstyle\\build\\x86_64-windows\\ghc-9.6.6\\bitfields-0.1.0.0\\x\\test-packing\\build\\test-packing\\test-packing-tmp\Main.hi]: finished in 0.00 milliseconds, allocated 1.724 megabytes
+*** systool:as:
+*** Assembler:
+!!! systool:as: finished in 0.00 milliseconds, allocated 0.291 megabytes
+compile: input file app\Main.hs
+*** Checking old interface for Main (use -ddump-hi-diffs for more details):
+[1 of 2] Skipping Main             ( app\Main.hs, C:\shared\haskell\bitfields\dist-newstyle\build\x86_64-windows\ghc-9.6.6\bitfields-0.1.0.0\x\test-packing\build\test-packing\test-packing-tmp\Main.o )
+[2 of 2] Linking C:\\shared\\haskell\\bitfields\\dist-newstyle\\build\\x86_64-windows\\ghc-9.6.6\\bitfields-0.1.0.0\\x\\test-packing\\build\\test-packing\\test-packing.exe [Objects changed]
+True
+True
+False
+False
+"PackedFields:"
+0
+Just True
+Right 13
+254
